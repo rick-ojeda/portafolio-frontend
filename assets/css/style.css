@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+
+
+/* estilos generales*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 20px;
+    margin: 10px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 440px);
+    grid-template-rows: 85px 315px 315px 300px 85px;
+
+    grid-template-areas:
+        "header header header"
+        "section section aside"
+        "section section aside"
+        "main main aside"
+        "footer footer footer";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li,
+i {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    color: rgb(2, 2, 82);
+}
+
+.fondo {
+    background-color: rgb(39, 82, 226);
+    border-radius: 5px;
+}
+
+header,
+footer {
+    max-width: 1320px;
+}
+
+.section,
+main {
+    max-width: 880px;
+}
+
+aside {
+    max-width: 440px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 25px;
+    grid-area: header;
+}
+
+header .menu {
+    display: flex;
+    align-items: center;
+
+}
+
+header .menu ul {
+    display: flex;
+    list-style: none;
+    column-gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    grid-area: section;
+    display: flex;
+    column-gap: 10px;
+    margin: 15px 0px;
+
+}
+
+.section .fondo {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.section .fondo div {
+    width: 50%;
+
+}
+
+.section .fondo h1 span {
+    font-size: 40px;
+    color: rgb(4, 4, 107);
+}
+
+.section img {
+    border-radius: 5px;
+    height: 600px;
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    column-gap: 10px;
+}
+
+main section h2 {
+    margin-bottom: 15px;
+}
+
+main #sobremi,
+main #contacto {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main #sobremi p {
+    margin-bottom: 10px;
+
+}
+
+main .fondo .icon {
+    display: flex;
+    justify-content: center;
+    column-gap: 25px;
+    background-color: rgb(4, 4, 107);
+
+}
+
+main #contacto.fondo-oscuro {
+    background-color: rgb(4, 4, 107);
+}
+
+main #contacto.fondo-oscuro p,
+main #contacto.fondo-oscuro h2 {
+    color: white;
+}
+
+
+aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Cambio para que tome el mismo tamaño que section y la imagen de la misma fila*/
+aside #proyectos,
+aside .redes {
+    margin: 15px 0 10px 15px;
+    padding: 20px;
+}
+
+aside .redes {
+    display: flex;
+    justify-content: center;
+    column-gap: 25px;
+}
+
+
+
+aside #proyectos>h2 {
+    margin-top: 30px;
+}
+
+aside #proyectos a div {
+    margin: 30px 0;
+    margin-bottom: 15px;
+}
+
+aside #proyectos hr {
+    color: rgb(4, 4, 107);
+    opacity: 1;
+}
+
+
+aside #proyectos a div img {
+    width: 100%;
+}
+
+footer {
+    grid-area: footer;
+    margin-top: 15px;
+    padding: 20px;
+
+}
+
+footer p {
+    text-align: center;
+
+}
+
+/* Modificacion de clases de bootstrap para cambiar color y comportamiento del acordion*/
+
+button {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 600;
+}
+
+.accordion-item {
+    border: none;
+    background: transparent;
+}
+
+
+.accordion-button {
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(55, 135, 226, 0.705);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgb(102,154,244);
+    color:rgb(2, 2, 82);
+    box-shadow: none;
+}
+
+
+.accordion-button.collapsed {
+    color:rgb(2, 2, 82);
+}
+
+.accordion-body {
+    border: none;
+    background-color: rgb(36,56,169)
+
+}
+
+
+.accordion-button:focus {
+    box-shadow: none;
+}
